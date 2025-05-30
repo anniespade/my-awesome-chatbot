@@ -34,7 +34,7 @@ export class ChatPage {
 
   async isGenerationComplete() {
     const response = await this.page.waitForResponse((response) =>
-      response.url().includes('/(chat)//api/chat'),
+      response.url().includes('/api/chat'),
     );
 
     await response.finished();
